@@ -1,0 +1,31 @@
+# Worlds to affect. Empty list = every End world.
+worlds: []
+
+# --- Core buffs ---
+health: 600.0              # vanilla is 200
+scale: 1.5                 # visual/hitbox size multiplier (vanilla 1.0)
+damage-multiplier: 2.0     # damage dragon deals to players (2.0 = double)
+damage-taken-multiplier: 0.75   # <1 = dragon takes less damage
+
+# --- Enrage phase (below this health fraction) ---
+enrage:
+  threshold: 0.5
+  extra-damage-multiplier: 1.25  # stacks on top of damage-multiplier
+  cooldown-multiplier: 0.5       # attacks come twice as fast
+  double-attacks: true           # use 2 attacks at once while enraged
+
+# --- Attack system ---
+attack-interval-ticks: 100   # base time between special attacks (20 ticks = 1s)
+range: 100.0                 # players this close get targeted
+
+attacks:
+  lightning: true        # telegraphed lightning strikes on players
+  fireballs: true        # dragon fireball barrage
+  wither-skulls: true    # wither skull volley
+  shulker-bullets: true  # homing bullets (levitation)
+  vex-minions: true      # summons temporary vexes
+  void-pull: true        # pulls players in, then shockwave slam
+
+minions:
+  max: 10
+  lifetime-seconds: 30

@@ -1,0 +1,13 @@
+name: DragonBuff
+version: '${project.version}'
+main: dev.dragonbuff.DragonBuff
+api-version: '1.21'
+description: Makes the Ender Dragon much more dangerous (Java + Bedrock via Geyser).
+commands:
+  dragonbuff:
+    description: DragonBuff admin command
+    usage: /dragonbuff reload
+    permission: dragonbuff.admin
+permissions:
+  dragonbuff.admin:
+    default: op
